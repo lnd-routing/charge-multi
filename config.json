@@ -1,0 +1,26 @@
+{
+	"listFile": "/home/lnd/charge-lnd/multiple_channels.list",
+	"confFile": "/home/lnd/charge-lnd/multiple_channels.config",
+	"disable" : {
+		"enabled" : true,
+		"maxRatio" : 0.01
+	},
+	"discourage" : {
+		"enabled" : true,
+		"minRatio" : 0.01,
+		"maxRatio" : 0.10,
+		"feeRate" : 5000
+	},
+	"proportional" : {
+		"enabled": true,
+		"minRatio": 0.10,
+		"maxRatio": 0.90,
+		"maxFee": 1000,
+		"minFee": 100
+	},
+	"encourage" : {
+		"enabled" : true,
+		"minRatio" : 0.90,
+		"feeRate" : 10
+	}
+}

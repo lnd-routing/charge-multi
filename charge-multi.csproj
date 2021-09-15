@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>charge_multi</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.18.0" />
+    <PackageReference Include="Grpc.Core" Version="2.40.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.40.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <Protobuf Include="Grpc\lightning.proto" GrpcServices="Client" />
+  </ItemGroup>
+
+</Project>
