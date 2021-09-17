@@ -92,7 +92,7 @@ namespace charge_multi
                     if (!channels_multi.Contains(channel.RemotePubkey))
                     {
                         channels_multi.Add(channel.RemotePubkey);
-                        Console.WriteLine("Node " + channel.RemotePubkey + " has multplie channels.");
+                        Console.WriteLine("Node " + channel.RemotePubkey + " has multiple channels.");
                     }
                 }
             }
@@ -151,7 +151,8 @@ namespace charge_multi
                 else if (config.GetProperty("proportional").GetProperty("enabled").GetBoolean()
                     && ratio >= config.GetProperty("proportional").GetProperty("minRatio").GetDecimal()
                     && ratio < config.GetProperty("proportional").GetProperty("maxRatio").GetDecimal())
-                {uint maxFee = config.GetProperty("proportional").GetProperty("maxFee").GetUInt32();
+                {
+                    uint maxFee = config.GetProperty("proportional").GetProperty("maxFee").GetUInt32();
                     uint minFee = config.GetProperty("proportional").GetProperty("minFee").GetUInt32();
 
                     uint fee = (uint)(minFee + ((maxFee - minFee) * (1 - ratio)));
